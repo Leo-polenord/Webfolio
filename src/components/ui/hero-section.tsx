@@ -1,6 +1,13 @@
 import { ShinyButton } from "./shiny-button"
 
 export function HeroSection() {
+  const scrollToProjects = () => {
+    const section = document.getElementById("projects")
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" })
+    }
+  }
+
   return (
     <section id="home" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
       <div className="mx-auto max-w-4xl">
@@ -17,7 +24,9 @@ export function HeroSection() {
           </p>
 
           <div className="flex justify-center">
-            <ShinyButton className="px-8 py-3 text-base">View My Work</ShinyButton>
+            <ShinyButton onClick={scrollToProjects} className="px-8 py-3 text-base">
+              View My Work
+            </ShinyButton>
           </div>
         </div>
       </div>
