@@ -2,14 +2,13 @@ import { GL } from "@/components/gl"
 import { FloatingNavbar } from "@/components/ui/floating-navbar"
 import { HeroSection } from "@/components/ui/hero-section"
 import { FeaturesSection } from "@/components/ui/features-section"
-import { PricingSection } from "@/components/ui/pricing-section"
+import { ProjectsSection } from "./components/ui/projects-section"
 import { AboutSection } from "@/components/ui/about-section"
 import { ContactSection } from "@/components/ui/contact-section"
 import { useEffect, useRef } from "react"
 
 export default function App() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const contactSectionRef = useRef<HTMLDivElement>(null)
 
@@ -22,38 +21,6 @@ export default function App() {
       const currentScroll = scrollContainer.scrollLeft
       const containerWidth = scrollContainer.offsetWidth
       const currentSection = Math.round(currentScroll / containerWidth)
-
-      if (currentSection === 2 && pricingSectionRef.current) {
-        const pricingSection = pricingSectionRef.current
-        const isAtTop = pricingSection.scrollTop === 0
-        const isAtBottom = pricingSection.scrollTop + pricingSection.clientHeight >= pricingSection.scrollHeight - 1
-
-        if (delta > 0 && !isAtBottom) {
-          return
-        }
-
-        if (delta < 0 && !isAtTop) {
-          return
-        }
-
-        if (delta < 0 && isAtTop) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 1 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-
-        if (delta > 0 && isAtBottom) {
-          e.preventDefault()
-          scrollContainer.scrollTo({
-            left: 3 * containerWidth,
-            behavior: "smooth",
-          })
-          return
-        }
-      }
 
       if (currentSection === 3 && aboutSectionRef.current) {
         const aboutSection = aboutSectionRef.current
@@ -159,7 +126,7 @@ export default function App() {
 
         <FeaturesSection />
 
-        <PricingSection ref={pricingSectionRef} />
+        <ProjectsSection />
 
         <AboutSection ref={aboutSectionRef} />
 
