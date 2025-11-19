@@ -21,14 +21,13 @@ export function FloatingNavbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 px-4 py-6">
       <div className="mx-auto flex max-w-7xl items-center justify-center gap-4">
-        {/* Navigation Links - Centrée */}
         <div className="rounded-2xl border border-white/10 bg-white/5 px-8 py-5 backdrop-blur-md">
           <div className="flex items-center justify-center gap-10">
             <button
-              onClick={() => scrollToSection("features")}
+              onClick={() => scrollToSection("skills")}
               className="text-base font-open-sans-custom font-medium text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              Features
+              Skills
             </button>
             <button
               onClick={() => scrollToSection("projects")}
@@ -51,7 +50,6 @@ export function FloatingNavbar() {
           </div>
         </div>
 
-        {/* Bouton Theme - À droite */}
         <button
           onClick={toggleTheme}
           className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/20 [text-shadow:_0_1px_3px_rgb(0_0_0_/_30%)]"

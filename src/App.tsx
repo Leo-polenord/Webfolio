@@ -1,7 +1,7 @@
 import { GL } from "@/components/gl"
 import { FloatingNavbar } from "@/components/ui/floating-navbar"
 import { HeroSection } from "@/components/ui/hero-section"
-import { FeaturesSection } from "@/components/ui/features-section"
+import { SkillsSection } from "@/components/ui/skills-section"
 import { ProjectsSection } from "./components/ui/projects-section"
 import { AboutSection } from "@/components/ui/about-section"
 import { ContactSection } from "@/components/ui/contact-section"
@@ -124,7 +124,7 @@ export default function App() {
 
         <HeroSection />
 
-        <FeaturesSection />
+        <SkillsSection />
 
         <ProjectsSection />
 
