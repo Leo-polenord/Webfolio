@@ -1,6 +1,6 @@
 import { SiGithub } from "react-icons/si"
 import { Badge } from "./badge"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 interface ProjectCardProps {
   title: string
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
-  showLiveDemo?: boolean // optionnel, par défaut true
+  showLiveDemo?: boolean
 }
 
 export function ProjectCard({ title, description, image, technologies, liveUrl, githubUrl, showLiveDemo = true }: ProjectCardProps) {
