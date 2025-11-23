@@ -44,6 +44,21 @@ export function useLanguage() {
 // Traductions
 const translations: Record<Language, Record<string, string>> = {
   en: {
+    // Legal Notice / Mentions Légales
+    'legal.title': 'Legal Notice',
+    'legal.back': '← Back',
+    'legal.site-editor': 'Site Publisher',
+    'legal.site-editor.text': 'Léo-Paul Jay\nEmail: leopaul.jay@outlook.com\nCountry: France',
+    'legal.hosting': 'Hosting',
+    'legal.hosting.text': 'None at the moment.',
+    'legal.intellectual': 'Intellectual Property',
+    'legal.intellectual.text': 'All content on this site (texts, images, code, etc.) is the property of Léo-Paul Jay, unless otherwise stated. Any reproduction, representation, modification, or publication, in whole or in part, is prohibited without prior authorization.',
+    'legal.personal-data': 'Personal Data',
+    'legal.personal-data.text': 'Information collected via the contact form is only used to respond to your messages. You may request deletion of your data at any time by email.',
+    'legal.cookies': 'Cookies',
+    'legal.cookies.text': 'This site does not use cookies for tracking or advertising purposes.',
+    'legal.contact': 'Contact',
+    'legal.contact.text': 'For any questions, contact: leopaul.jay@outlook.com',
     // Navbar
     'nav.skills': 'Skills',
     'nav.projects': 'Projects',
@@ -122,6 +137,21 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.download': 'Download CV',
   },
   fr: {
+    // Mentions Légales
+    'legal.title': 'Mentions légales',
+    'legal.back': '← Retour',
+    'legal.site-editor': 'Éditeur du site',
+    'legal.site-editor.text': 'Léo-Paul Jay\nEmail : leopaul.jay@outlook.com\nPays : France',
+    'legal.hosting': 'Hébergement',
+    'legal.hosting.text': 'Aucun pour le moment.',
+    'legal.intellectual': 'Propriété intellectuelle',
+    'legal.intellectual.text': 'Tous les contenus présents sur ce site (textes, images, code, etc.) sont la propriété de Léo-Paul Jay, sauf mention contraire. Toute reproduction, représentation, modification ou publication, totale ou partielle, est interdite sans autorisation préalable.',
+    'legal.personal-data': 'Données personnelles',
+    'legal.personal-data.text': 'Les informations collectées via le formulaire de contact sont uniquement utilisées pour répondre à vos messages. Vous pouvez demander la suppression de vos données à tout moment par email.',
+    'legal.cookies': 'Cookies',
+    'legal.cookies.text': 'Ce site n\'utilise pas de cookies à des fins de suivi ou de publicité.',
+    'legal.contact': 'Contact',
+    'legal.contact.text': 'Pour toute question, contactez : leopaul.jay@outlook.com',
     // Navbar
     'nav.skills': 'Compétences',
     'nav.projects': 'Projets',
