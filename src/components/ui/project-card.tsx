@@ -1,3 +1,4 @@
+import { SiGithub } from "react-icons/si"
 import { Badge } from "./badge"
 import { ExternalLink, Github } from "lucide-react"
 
@@ -8,9 +9,11 @@ interface ProjectCardProps {
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
+  showLiveDemo?: boolean // optionnel, par défaut true
 }
 
-export function ProjectCard({ title, description, image, technologies, liveUrl, githubUrl }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, technologies, liveUrl, githubUrl, showLiveDemo = true }: ProjectCardProps) {
+  const showLive = showLiveDemo && !!liveUrl;
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-all hover:border-white/20 hover:bg-white/10">
       {/* Image */}
@@ -45,7 +48,7 @@ export function ProjectCard({ title, description, image, technologies, liveUrl, 
 
         {/* Links */}
         <div className="flex gap-3">
-          {liveUrl && (
+          {showLive && (
             <a
               href={liveUrl}
               target="_blank"
@@ -63,7 +66,7 @@ export function ProjectCard({ title, description, image, technologies, liveUrl, 
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm text-white transition-all hover:bg-white/20 border border-white/10 hover:border-white/30"
             >
-              <Github className="h-4 w-4" />
+              <SiGithub className="h-4 w-4" />
               GitHub
             </a>
           )}

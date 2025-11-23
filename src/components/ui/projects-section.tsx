@@ -12,6 +12,7 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project",
+      showLiveDemo: false,
     },
     {
       title: "Task Management App",
@@ -19,6 +20,7 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
       technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project",
+      showLiveDemo: false,
     },
     {
       title: "Portfolio Website",
@@ -26,13 +28,15 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
       technologies: ["React", "Three.js", "Framer Motion", "Vite"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project",
+      showLiveDemo: true,
     },
     {
       title: "Weather Dashboard",
       description: "Real-time weather dashboard with interactive maps, forecasts, and beautiful data visualizations using Chart.js.",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "Sass"],
+      technologies: ["Vue.js", "Chart.js", "OpenWeather API"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/example/project",
+      showLiveDemo: true,
     },
   ]
 
