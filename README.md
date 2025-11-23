@@ -24,7 +24,7 @@ Jay-Folio est un portfolio moderne développé avec React, Vite et Tailwind CSS.
 
 ## Aperçu
 
-![Aperçu de la page d’accueil](./screenshot-home.png)
+![Aperçu de la page d’accueil](./public/screenshot-home.png)
 
 ## Installation
 
