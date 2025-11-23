@@ -134,7 +134,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.location.value': 'France',
     'contact.follow': 'Follow Me',
     'contact.resume': 'Resume',
-    'contact.download': 'Download CV',
+    'contact.download': 'My CV',
   },
   fr: {
     // Mentions Légales
