@@ -46,7 +46,7 @@ export const GL = ({ hovering = false }: { hovering?: boolean }) => {
   };
 
   // Couleurs différentes selon le thème
-  const backgroundColor = isDark ? "#000" : "#FAF9F7";
+  const backgroundColor = isDark ? "#000" : "#fff";
   
   return (
     <div id="webgl">
@@ -78,8 +78,9 @@ export const GL = ({ hovering = false }: { hovering?: boolean }) => {
         <Effects multisamping={0} disableGamma>
           <shaderPass
             args={[VignetteShader]}
-            uniforms-darkness-value={isDark ? config.vignetteDarkness : 0}
-            uniforms-offset-value={isDark ? config.vignetteOffset : 10.0}
+            uniforms-darkness-value={isDark ? config.vignetteDarkness : config.vignetteDarkness}
+            uniforms-offset-value={isDark ? config.vignetteOffset : config.vignetteOffset}
+            uniforms-vignetteColor-value={isDark ? [0,0,0] : [1,1,1]}
           />
         </Effects>
       </Canvas>

@@ -130,7 +130,7 @@ export function Particles({
     // Blanc pour le thème sombre, violet pour le thème clair
     const particleColor = isDark 
       ? new THREE.Vector3(1.0, 1.0, 1.0) // Blanc
-      : new THREE.Vector3(0.7, 0.3, 1.0); // Violet vif (#B34DFF - hsl(262, 80%, 60%))
+      : new THREE.Vector3(0.7, 0.3, 1.0); // Violet vif (#B34DFF - hsla(262, 80%, 46%, 1.00))
     
     dofPointsMaterial.uniforms.uColor.value = particleColor;
 

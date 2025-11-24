@@ -1,8 +1,11 @@
+import * as THREE from 'three';
+
 export const VignetteShader = {
   uniforms: {
-    tDiffuse: { value: null }, // provided by ShaderPass
-    darkness: { value: 1.0 }, // strength of the vignette effect
-    offset: { value: 1.0 }, // vignette offset
+    tDiffuse: { value: null },
+    darkness: { value: 1.0 },
+    offset: { value: 1.0 },
+    vignetteColor: { value: new THREE.Color(0,0,0) }, // Couleur du vignettage
   },
   vertexShader: /* glsl */`
     varying vec2 vUv;
@@ -15,6 +18,7 @@ export const VignetteShader = {
     uniform sampler2D tDiffuse;
     uniform float darkness;
     uniform float offset;
+    uniform vec3 vignetteColor;
     varying vec2 vUv;
     
     void main() {
@@ -27,7 +31,9 @@ export const VignetteShader = {
       // Create vignette effect
       float vignette = 1.0 - smoothstep(offset, offset + darkness, dist);
       
-      gl_FragColor = vec4(texel.rgb * vignette, texel.a);
+      // Mélange la couleur du fond et la couleur du vignettage
+      vec3 color = mix(vignetteColor, texel.rgb, vignette);
+      gl_FragColor = vec4(color, texel.a);
     }
   `
 };
