@@ -14,7 +14,13 @@ import {
   SiGit,
   SiVite,
   SiDocker,
-  SiGithubactions
+  SiGithubactions,
+  SiBlazor,
+  SiVuedotjs,
+  SiGithub,
+  SiCodecrafters,
+  SiFigma,
+  SiTestinglibrary
 } from "react-icons/si"
 import { Lightbulb, Users, BookOpen, Target, Zap, MessageSquare, GraduationCap, Palette } from "lucide-react"
 
@@ -22,9 +28,11 @@ const frontendSkills = [
   { icon: SiReact, name: "React", color: "#61DAFB" },
   { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
   { icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },
-  { icon: SiThreedotjs, name: "Three.js", color: "#000000" },
+  { icon: SiThreedotjs, name: "Three.js", color: "#A3A3A3" },
   { icon: SiFramer, name: "Motion", color: "#0055FF" },
-  { icon: SiNextdotjs, name: "Next.js", color: "#000000" },
+  { icon: SiNextdotjs, name: "Next.js", color: "#555555" },
+  { icon: SiBlazor, name: "Blazor", color: "#512BD4" },
+  { icon: SiVuedotjs, name: "Vue.js", color: "#4FC08D" },
 ]
 
 const backendSkills = [
@@ -36,6 +44,10 @@ const backendSkills = [
 
 const toolsSkills = [
   { icon: SiGit, name: "Git", color: "#F05032" },
+  { icon: SiGithub, name: "GitHub", color: "#555555" },
+  { icon: SiCodecrafters, name: "VSCode", color: "#007ACC" },
+  { icon: SiFigma, name: "Figma", color: "#9d1ef2ff" },
+  { icon: SiTestinglibrary, name: "Test automatisé", color: "#E33332" },
   { icon: SiVite, name: "Vite", color: "#646CFF" },
   { icon: SiDocker, name: "Docker", color: "#2496ED" },
   { icon: SiGithubactions, name: "CI/CD", color: "#2088FF" },
@@ -149,7 +161,7 @@ export function SkillsSection() {
               <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
                 {t('skills.frontend')}
               </h3>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-4 gap-6">
                 {frontendSkills.map((skill) => (
                   <SkillIcon key={skill.name} {...skill} />
                 ))}
@@ -171,7 +183,7 @@ export function SkillsSection() {
               <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
                 {t('skills.tools')}
               </h3>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-4 gap-6">
                 {toolsSkills.map((skill) => (
                   <SkillIcon key={skill.name} {...skill} />
                 ))}

@@ -7,19 +7,27 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
   
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with Next.js and Stripe integration. Features include product filtering, cart management, and secure checkout.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project",
+      title: "AutoPro",
+      description:
+        "AutoPro is a modern garage showcase built with Next.jsand TypeScript. It features a filterable vehicle catalog, online appointment requests, and an admin dashboard powered by Supabase.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Shadcn UI",
+        "Supabase",
+        "PostgreSQL",
+      ],
+      liveUrl: "https://autopro.leo-polenord.com",
+      githubUrl: "https://github.com/Leo-polenord/autopro",
       showLiveDemo: false,
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
+      title: "CTVR",
+  description: "School project for managing buses and bus accidents in a fictional company, featuring complete role management, device geolocation, and quote preview.",
+  technologies: ["Flask",  "React", "TypeScript", "Shadcn UI", "PostgreSQL"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project",
+      githubUrl: "https://github.com/Leo-polenord/ctvr",
       showLiveDemo: false,
     },
     {
@@ -27,16 +35,16 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
       description: "A stunning portfolio website with Three.js animations, smooth scrolling, and responsive design. Built to showcase creative work.",
       technologies: ["React", "Three.js", "Motion", "Vite"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project",
+      githubUrl: "https://github.com/Leo-polenord/Webfolio",
       showLiveDemo: true,
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather dashboard with interactive maps, forecasts, and beautiful data visualizations using Chart.js.",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example/project",
-      showLiveDemo: true,
+      title: "WeatherReact",
+      description: "Real-time weather application allowing users to check current weather conditions and forecasts using OpenWeatherMap API.",
+      technologies: ["React", "TypeScript", "OpenWeatherMap API", "Shadcn UI", "Vite"],
+      liveUrl: "https://pasdelinkyet.com",
+      githubUrl: "https://github.com/Leo-polenord/WeatherReact",
+      showLiveDemo: false,
     },
   ]
 
