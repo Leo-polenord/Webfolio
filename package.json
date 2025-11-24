@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "build:docs": "npm run build && rmdir /S /Q docs && mkdir docs && xcopy /E /I /Y dist\\* docs\\",
+  "lint": "eslint .",
+  "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-label": "2.1.1",
