@@ -15,10 +15,10 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, image, technologies, liveUrl, githubUrl, showLiveDemo = true }: ProjectCardProps) {
   const showLive = showLiveDemo && !!liveUrl;
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-all hover:border-white/20 hover:bg-white/10">
+    <div className="group relative flex overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-all hover:border-white/20 hover:bg-white/10">
       {/* Image */}
       {image && (
-        <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-white/10 to-white/5">
+        <div className="aspect-video w-full flex flex-col justify-between overflow-hidden bg-gradient-to-br from-white/10 to-white/5">
           <img 
             src={image} 
             alt={title}
@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, image, technologies, liveUrl, 
       )}
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col justify-between">
         <h3 className="mb-3 text-2xl font-bold text-white [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom">
           {title}
         </h3>
