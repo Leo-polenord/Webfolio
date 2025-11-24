@@ -61,8 +61,8 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
           </p>
         </BentoCard>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <BentoCard className="md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-[2.2fr,0.8fr] gap-4">
+          <BentoCard className="md:col-span-1">
             <h3 className="text-xl font-bold text-foreground mb-4 font-open-sans-custom">
               {t('contact.form.title')}
             </h3>
@@ -125,7 +125,7 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
             </form>
           </BentoCard>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:col-span-1">
             <BentoCardWithIcon
               icon={<Mail className="h-5 w-5 text-foreground" />}
               title={t('contact.email')}
