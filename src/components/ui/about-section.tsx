@@ -10,7 +10,7 @@ export const AboutSection = forwardRef<HTMLElement>((_props, ref) => {
     <section
       id="about"
       ref={ref}
-      className="flex min-w-full snap-start items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       <div

@@ -83,7 +83,7 @@ export function SkillsSection() {
   const { t } = useLanguage()
   
   return (
-    <section id="skills" className="flex min-w-full snap-start items-center justify-center px-4 py-20">
+    <section id="skills" className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20">
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">

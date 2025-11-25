@@ -36,7 +36,7 @@ function MainApp() {
     if (!scrollContainer) return;
 
     // Désactive le scroll horizontal sur mobile
-    const isDesktop = () => window.innerWidth >= 1024;
+    const isDesktop = () => window.innerWidth >= 1280;
     let handleWheel: ((e: WheelEvent) => void) | null = null;
 
     function updateScrollMode() {
@@ -133,7 +133,7 @@ function MainApp() {
 
       <div
         ref={scrollContainerRef}
-        className="relative z-10 flex h-screen w-full lg:flex-row flex-col lg:overflow-x-auto lg:overflow-y-hidden overflow-y-auto overflow-x-hidden scroll-smooth lg:snap-x lg:snap-mandatory"
+        className="relative z-10 w-full h-screen flex-col xl:flex xl:flex-row xl:overflow-x-auto xl:overflow-y-hidden overflow-y-auto overflow-x-hidden scroll-smooth xl:snap-x xl:snap-mandatory"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         <style>{`

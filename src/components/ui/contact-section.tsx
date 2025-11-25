@@ -43,7 +43,7 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
     <section
       id="contact"
       ref={ref}
-      className="flex min-w-full snap-start items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">
