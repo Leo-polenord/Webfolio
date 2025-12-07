@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { Input } from "./input"
 import { Button } from "./button"
 import { Label } from "./label"
@@ -8,7 +8,7 @@ import { Mail, MapPin, Download } from "lucide-react"
 import { SiGithub, SiLinkedin } from "react-icons/si"
 import { useLanguage } from "@/context/LanguageContext"
 
-export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
+export function ContactSection() {
   const { t } = useLanguage()
   const formRef = useRef<HTMLFormElement>(null)
   const [sent, setSent] = useState(false)
@@ -42,8 +42,7 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <section
       id="contact"
-      ref={ref}
-      className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-screen items-center justify-center px-4 py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">
@@ -184,6 +183,4 @@ export const ContactSection = forwardRef<HTMLElement>((_props, ref) => {
       </div>
     </section>
   )
-})
-
-ContactSection.displayName = "ContactSection"
+}

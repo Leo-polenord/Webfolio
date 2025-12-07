@@ -1,8 +1,7 @@
-import { forwardRef } from "react"
 import { ProjectCard } from "./project-card"
 import { useLanguage } from "@/context/LanguageContext"
 
-export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
+export function ProjectsSection() {
   const { t } = useLanguage()
   
   const projects = [
@@ -51,8 +50,7 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <section
       id="projects"
-      ref={ref}
-      className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-screen items-center justify-center px-4 py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">
@@ -72,6 +70,4 @@ export const ProjectsSection = forwardRef<HTMLElement>((_props, ref) => {
       </div>
     </section>
   )
-})
-
-ProjectsSection.displayName = "ProjectsSection"
+}

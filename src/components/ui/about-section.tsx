@@ -1,16 +1,14 @@
-import { forwardRef } from "react"
 import { AboutQuote } from "./about-quote"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/context/LanguageContext"
 
-export const AboutSection = forwardRef<HTMLElement>((_props, ref) => {
+export function AboutSection() {
   const { t } = useLanguage()
   
   return (
     <section
       id="about"
-      ref={ref}
-      className="flex min-w-full min-h-screen snap-start items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-screen items-center justify-center px-4 py-20"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       <div
@@ -36,6 +34,4 @@ export const AboutSection = forwardRef<HTMLElement>((_props, ref) => {
       </div>
     </section>
   )
-})
-
-AboutSection.displayName = "AboutSection"
+}
