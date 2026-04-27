@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import DotPattern from "@/components/ui/dot-pattern"
 import { useLanguage } from "@/context/LanguageContext"
 
 export function AboutQuote() {
@@ -64,8 +63,6 @@ export function AboutQuote() {
               mass: 0.5,
             }}
           />
-
-          <DotPattern width={5} height={5} />
 
           <div className="relative z-20 mx-auto max-w-5xl rounded-[24px] py-4 px-2 sm:py-6 sm:px-4 md:p-10 xl:py-20">
             <div className="space-y-3 sm:space-y-4 md:space-y-6">

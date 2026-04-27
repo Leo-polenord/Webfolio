@@ -1,7 +1,6 @@
 import type React from "react"
 import { cn } from "@/lib/utils"
 import { type LucideIcon, PlusIcon } from "lucide-react"
-import DotPattern from "@/components/ui/dot-pattern"
 
 type ContactInfoProps = React.ComponentProps<"div"> & {
   icon: LucideIcon
@@ -33,7 +32,6 @@ export function ContactCard({
       )}
       {...props}
     >
-      <DotPattern width={5} height={5} />
       <PlusIcon className="absolute -top-3 -left-3 h-6 w-6 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]" />
       <PlusIcon className="absolute -top-3 -right-3 h-6 w-6 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]" />
       <PlusIcon className="absolute -bottom-3 -left-3 h-6 w-6 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]" />
