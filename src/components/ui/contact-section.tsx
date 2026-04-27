@@ -144,40 +144,40 @@ export function ContactSection() {
               </p>
             </BentoCardWithIcon>
 
-            <div className="grid grid-cols-2 gap-4">
-              <BentoCard hover>
-                <h4 className="text-foreground font-semibold font-open-sans-custom mb-4">{t('contact.follow')}</h4>
-                <div className="flex gap-3">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-xl p-4 backdrop-blur-md">
+                <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.follow')}</h4>
+                <div className="flex gap-2">
                   <a 
                     href="https://github.com/Leo-polenord" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-accent/20 hover:bg-accent/30 dark:bg-white/10 dark:hover:bg-white/20 transition-colors"
+                    className="p-2 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
                   >
-                    <SiGithub className="h-5 w-5 text-foreground" />
+                    <SiGithub className="h-4 w-4 text-foreground" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/léo-paul-jay" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-accent/20 hover:bg-accent/30 dark:bg-white/10 dark:hover:bg-white/20 transition-colors"
+                    className="p-2 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
                   >
-                    <FaLinkedin className="h-5 w-5 text-foreground" />
+                    <FaLinkedin className="h-4 w-4 text-foreground" />
                   </a>
                 </div>
-              </BentoCard>
+              </div>
 
-              <BentoCard hover>
-                <h4 className="text-foreground font-semibold font-open-sans-custom mb-4">{t('contact.resume')}</h4>
+              <div className="bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-xl p-4 backdrop-blur-md">
+                <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.resume')}</h4>
                 <a 
                   href="/cv.pdf" 
                   download
-                  className="flex items-center justify-center gap-2 p-2 rounded-lg bg-accent/20 hover:bg-accent/30 dark:bg-white/10 dark:hover:bg-white/20 transition-colors"
+                  className="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
                 >
                   <Download className="h-5 w-5 text-foreground" />
                   <span className="text-foreground text-sm">{t('contact.download')}</span>
                 </a>
-              </BentoCard>
+              </div>
             </div>
           </div>
         </div>
