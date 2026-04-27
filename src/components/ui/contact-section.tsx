@@ -5,7 +5,8 @@ import { Label } from "./label"
 import { Textarea } from "./textarea"
 import { BentoCard, BentoCardWithIcon } from "./bento-card"
 import { Mail, MapPin, Download } from "lucide-react"
-import { SiGithub, SiLinkedin } from "react-icons/si"
+import { SiGithub } from "react-icons/si"
+import { FaLinkedin } from "react-icons/fa"
 import { useLanguage } from "@/context/LanguageContext"
 
 export function ContactSection() {
@@ -161,7 +162,7 @@ export function ContactSection() {
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-accent/20 hover:bg-accent/30 dark:bg-white/10 dark:hover:bg-white/20 transition-colors"
                   >
-                    <SiLinkedin className="h-5 w-5 text-foreground" />
+                    <FaLinkedin className="h-5 w-5 text-foreground" />
                   </a>
                 </div>
               </BentoCard>
