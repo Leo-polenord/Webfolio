@@ -9,8 +9,6 @@ import { ContactSection } from "./contact-section"
 export default function MacBookDisplay() {
   return (
     <main className="h-screen bg-neutral-200 dark:bg-neutral-900">
-      <FloatingNavbar />
-
       <div className="h-full flex items-center justify-center p-2">
         <div className="w-[90vw] max-w-6xl relative">
           <img
@@ -19,12 +17,18 @@ export default function MacBookDisplay() {
             className="w-full h-auto"
           />
 
-          <div className="absolute top-[5.5%] left-[8.2%] w-[83.6%] h-[76.5%] overflow-y-auto overflow-x-hidden">
+          <div className="absolute top-[10%] left-[10%] w-[80%] h-[80%] overflow-y-auto overflow-x-hidden rounded-t-[20px] border-[10px] border-black">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-b-lg z-[60]" />
+            <div className="h-full overflow-y-auto overflow-x-hidden">
+            <div className="pt-12">
+              <FloatingNavbar />
+            </div>
             <HeroSection />
             <SkillsSection />
             <ProjectsSection />
             <AboutSection />
             <ContactSection />
+            </div>
           </div>
         </div>
       </div>

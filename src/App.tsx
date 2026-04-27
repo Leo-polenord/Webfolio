@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { FloatingNavbar } from "@/components/ui/floating-navbar"
 import MentionsLegales from "@/components/ui/mentions-legales"
 import MacBookDisplay from "@/components/ui/macbook-display"
 
@@ -15,10 +14,5 @@ export default function App() {
 }
 
 function MainApp() {
-  return (
-    <>
-      <FloatingNavbar />
-      <MacBookDisplay />
-    </>
-  )
+  return <MacBookDisplay />
 }
