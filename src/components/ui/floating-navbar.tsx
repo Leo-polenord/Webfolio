@@ -1,11 +1,15 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Moon, Sun, Globe } from 'lucide-react'
 import { useLanguage } from "@/context/LanguageContext"
 
 export function FloatingNavbar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark")
   const { language, setLanguage, t } = useLanguage()
+
+  useEffect(() => {
+    document.documentElement.classList.add("dark")
+  }, [])
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
