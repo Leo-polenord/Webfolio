@@ -9,17 +9,17 @@ import { ContactSection } from "./contact-section"
 export default function MacBookDisplay() {
   return (
     <main className="h-screen bg-neutral-200 dark:bg-neutral-900">
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
       <div className="h-full flex items-center justify-center p-2">
         <div className="w-[90vw] max-w-6xl relative">
-          <img
-            src={MacBookImg}
-            alt="MacBook"
-            className="w-full h-auto"
-          />
+          <img src={MacBookImg} alt="MacBook" className="w-full h-auto" />
 
           <div className="absolute top-[10%] left-[10%] w-[80%] h-[80%] overflow-hidden rounded-t-[20px] border-[10px] border-black">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-b-lg z-[60]" />
-            <div className="h-full overflow-y-auto overflow-x-hidden">
+            <div className="h-full overflow-y-auto overflow-x-hidden no-scrollbar">
               <div className="pt-8">
                 <FloatingNavbar />
               </div>
