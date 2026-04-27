@@ -1,11 +1,10 @@
 "use client"
 import { useState } from "react"
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Moon, Sun, Globe } from 'lucide-react'
 import { useLanguage } from "@/context/LanguageContext"
 
 export function FloatingNavbar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark")
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
   const scrollToSection = (sectionId: string) => {
@@ -13,21 +12,12 @@ export function FloatingNavbar() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" })
     }
-    setIsMobileMenuOpen(false)
   }
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark"
     setTheme(newTheme)
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'fr' : 'en')
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
   }
 
   const navLinks = [
@@ -38,76 +28,53 @@ export function FloatingNavbar() {
   ]
 
   return (
-    <>
-      <nav className="absolute top-0 left-0 right-0 z-[50] px-3 py-3 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="mx-auto flex items-center justify-between">
+    <nav className="absolute top-0 left-0 right-0 z-[50] px-4 py-3">
+      <div className="flex items-center justify-between w-full">
+        <div className="flex items-center gap-1.5">
           <button
-            onClick={toggleLanguage}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl border border-border/50 bg-card/50 hover:bg-card/70 transition-all"
+            onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-white/15 transition-all shadow-sm"
           >
-            {language === 'en' ? (
-              <>
-                <span className="text-xs font-bold">FR</span>
-              </>
-            ) : (
-              <>
-                <span className="text-xs font-bold">EN</span>
-              </>
-            )}
+            <Globe className="w-3 h-3 text-gray-600 dark:text-gray-300" />
+            <span className="text-xs font-medium text-gray-700 dark:text-gray-200">
+              {language === 'en' ? 'FR' : 'EN'}
+            </span>
           </button>
 
-          <div className="hidden sm:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-2">
+          {navLinks.slice(0, 2).map((link) => (
             <button
-              className="sm:hidden p-2 rounded-xl border border-border/50 bg-card/50"
-              onClick={() => setIsMobileMenuOpen(true)}
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="px-4 py-2 text-xs font-medium text-gray-600 dark:text-gray-300 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full hover:bg-white/20 dark:hover:bg-white/15 backdrop-blur-md transition-all whitespace-nowrap shadow-sm"
             >
-              <Menu className="h-4 w-4" />
+              {link.label}
             </button>
-
-            <button onClick={toggleTheme} className="p-2 rounded-xl border border-border/50 bg-card/50 hover:bg-card/70 transition-all">
-              {theme === "dark" ? (
-                <Sun className="h-4 w-4 text-yellow-300" />
-              ) : (
-                <Moon className="h-4 w-4 text-blue-400" />
-              )}
-            </button>
-          </div>
+          ))}
         </div>
-      </nav>
 
-      {isMobileMenuOpen && (
-        <div className="absolute inset-0 z-[60] sm:hidden bg-background/95 backdrop-blur-md">
-          <div className="flex flex-col items-center justify-center h-full gap-6">
+        <div className="flex items-center gap-1.5">
+          {navLinks.slice(2).map((link) => (
             <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 p-2"
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="px-4 py-2 text-xs font-medium text-gray-600 dark:text-gray-300 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full hover:bg-white/20 dark:hover:bg-white/15 backdrop-blur-md transition-all whitespace-nowrap shadow-sm"
             >
-              <X className="h-5 w-5" />
+              {link.label}
             </button>
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-lg font-medium"
-              >
-                {link.label}
-              </button>
-            ))}
-          </div>
+          ))}
+
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 backdrop-blur-md hover:bg-white/20 dark:hover:bg-white/15 transition-all shadow-sm"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4 text-amber-400" />
+            ) : (
+              <Moon className="w-4 h-4 text-slate-600" />
+            )}
+          </button>
         </div>
-      )}
-    </>
+      </div>
+    </nav>
   )
 }
