@@ -12,9 +12,9 @@ export function BentoCard({ children, className, hover = false }: BentoCardProps
     <div
       className={cn(
         "rounded-2xl border backdrop-blur-md p-6",
-        "border-border/50 bg-card/50",
+        "border-border bg-white/80 shadow-sm",
         "dark:border-white/10 dark:bg-white/5",
-        hover && "hover:bg-card/70 dark:hover:bg-white/10 transition-colors",
+        hover && "hover:bg-white dark:hover:bg-white/10 transition-colors",
         className
       )}
     >
@@ -33,7 +33,7 @@ export function BentoCardWithIcon({ icon, title, children }: BentoCardIconProps)
   return (
     <BentoCard hover>
       <div className="flex items-center gap-3 mb-2">
-        <div className="p-2 rounded-lg bg-accent/20 dark:bg-white/10">
+        <div className="p-2 rounded-lg bg-accent/20 dark:bg-white/20">
           {icon}
         </div>
         <h4 className="text-foreground font-semibold font-open-sans-custom">{title}</h4>
