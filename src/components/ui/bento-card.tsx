@@ -12,8 +12,8 @@ export function BentoCard({ children, className, hover = false }: BentoCardProps
     <div
       className={cn(
         "rounded-2xl border backdrop-blur-md p-6",
-        "border-border bg-white/80 shadow-sm",
-        "dark:border-white/10 dark:bg-white/5",
+        "border-border bg-white shadow-sm",
+        "dark:border-white/10 dark:bg-white/5 dark:shadow-none",
         hover && "hover:bg-white dark:hover:bg-white/10 transition-colors",
         className
       )}

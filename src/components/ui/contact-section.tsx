@@ -57,7 +57,7 @@ export function ContactSection() {
 
         <BentoCard className="mb-4 text-center">
           <p className="text-foreground/90 text-lg font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                {t('contact.availability')}
+            {t('contact.availability')}
           </p>
         </BentoCard>
 
@@ -127,16 +127,16 @@ export function ContactSection() {
 
           <div className="flex flex-col gap-4 md:col-span-1">
             <BentoCardWithIcon
-              icon={<Mail className="h-5 w-5 text-foreground" />}
+              icon={<Mail className="h-5 w-5 text-primary" />}
               title={t('contact.email')}
             >
-              <a href="mailto:leopaul.jay@outlook.com" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+              <a href="mailto:leopaul.jay@outlook.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 leopaul.jay@outlook.com
               </a>
             </BentoCardWithIcon>
 
             <BentoCardWithIcon
-              icon={<MapPin className="h-5 w-5 text-foreground" />}
+              icon={<MapPin className="h-5 w-5 text-primary" />}
               title={t('contact.location')}
             >
               <p className="text-muted-foreground text-sm">
@@ -145,36 +145,36 @@ export function ContactSection() {
             </BentoCardWithIcon>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-xl p-4 backdrop-blur-md">
+              <div className="bg-white dark:bg-white/5 border border-border dark:border-white/10 rounded-xl p-4 shadow-sm dark:shadow-none">
                 <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.follow')}</h4>
                 <div className="flex gap-2">
                   <a 
                     href="https://github.com/Leo-polenord" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
+                    className="p-2 rounded-lg bg-muted border border-border dark:border-white/10 hover:bg-accent/20 transition-all"
                   >
-                    <SiGithub className="h-4 w-4 text-foreground" />
+                    <SiGithub className="h-4 w-4 text-primary" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/léo-paul-jay" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
+                    className="p-2 rounded-lg bg-muted border border-border dark:border-white/10 hover:bg-accent/20 transition-all"
                   >
-                    <FaLinkedin className="h-4 w-4 text-foreground" />
+                    <FaLinkedin className="h-4 w-4 text-primary" />
                   </a>
                 </div>
               </div>
 
-              <div className="bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-xl p-4 backdrop-blur-md">
+              <div className="bg-white dark:bg-white/5 border border-border dark:border-white/10 rounded-xl p-4 shadow-sm dark:shadow-none">
                 <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.resume')}</h4>
                 <a 
                   href="/cv.pdf" 
                   download
-                  className="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/15 transition-all"
+                  className="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-muted border border-border dark:border-white/10 hover:bg-accent/20 transition-all"
                 >
-                  <Download className="h-5 w-5 text-foreground" />
+                  <Download className="h-5 w-5 text-primary" />
                   <span className="text-foreground text-sm">{t('contact.download')}</span>
                 </a>
               </div>
