@@ -50,7 +50,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="flex min-w-full min-h-screen items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-[30vh] origin-top scale-75 items-center justify-center px-4 py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">

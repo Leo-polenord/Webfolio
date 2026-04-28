@@ -80,13 +80,11 @@ export default function MacBookDisplay() {
               <div className="pt-8">
                 <FloatingNavbar />
               </div>
-              <div className="origin-top scale-75">
-                <HeroSection />
-                <SkillsSection />
-                <ProjectsSection />
-                <AboutSection />
-                <ContactSection />
-              </div>
+              <HeroSection />
+              <SkillsSection />
+              <ProjectsSection />
+              <AboutSection />
+              <ContactSection />
               <Footer />
             </div>
           </div>
