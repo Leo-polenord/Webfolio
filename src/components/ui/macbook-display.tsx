@@ -6,41 +6,72 @@ import { ProjectsSection } from "./projects-section"
 import { AboutSection } from "./about-section"
 import { ContactSection } from "./contact-section"
 
+const postItColors = {
+  yellow: 'bg-yellow-300',
+  pink: 'bg-pink-400',
+  blue: 'bg-sky-400',
+  green: 'bg-green-400',
+  orange: 'bg-orange-400',
+  purple: 'bg-purple-400',
+} as const
+
+function PostIt({ color = 'yellow', rotation = 0, left = '0%', top = '0%', children }: {
+  color?: 'yellow' | 'pink' | 'blue' | 'green' | 'orange' | 'purple'
+  rotation?: number
+  left?: string
+  top?: string
+  children?: React.ReactNode
+}) {
+  return (
+    <div
+      className="absolute w-32 h-32"
+      style={{
+        left: left,
+        top: top,
+        rotate: `${rotation}deg`,
+      }}
+    >
+      <div
+        className="absolute w-full h-1 bg-black/30 blur-sm"
+        style={{ top: 'calc(100% - 4px)', left: 0, zIndex: -1 }}
+      />
+      <div className={`w-full h-full ${postItColors[color]} p-3 text-sm`}>
+        {children}
+      </div>
+    </div>
+  )
+}
+
 export default function MacBookDisplay() {
   return (
     <main className="h-screen relative overflow-hidden">
       <style>{`
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        .wall {
-          background: linear-gradient(180deg, #e8e4df 0%, #d4cfc8 50%, #c9c3bb 100%);
-        }
-        .window {
-          background: linear-gradient(180deg, #87ceeb 0%, #b0e0e6 30%, #f0f8ff 60%, #ffffff 100%);
-          box-shadow: 
-            inset 0 0 20px rgba(255,255,255,0.8),
-            0 0 30px rgba(135, 206, 235, 0.5);
-        }
       `}</style>
       
-      <div className="absolute inset-0 wall" />
-      
-      <div className="absolute top-0 left-0 right-0 h-1/2 window">
-        <div className="w-full h-full border-l-[20px] border-r-[20px] border-b-[20px] border-gray-200">
-          <div className="w-[1px] h-full bg-gray-300 absolute left-1/2 top-0" />
-          <div className="h-[1px] w-full bg-gray-300 absolute top-1/2 left-0" />
-        </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-72 bg-gradient-to-b from-amber-700 via-amber-800 to-amber-900">
-        <div className="absolute inset-0 opacity-30" style={{backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(0,0,0,0.1) 30px, rgba(0,0,0,0.1) 32px)'}} />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-950/50" />
-      </div>
+      <div className="absolute inset-0 bg-[#f8f8f8]" />
       
       <div className="h-full flex items-center justify-center p-2 relative z-10">
-        <div className="w-[90vw] max-w-6xl relative">
+        <div className="w-[90vw] max-w-6xl relative" id="macbook-container">
+          <PostIt color="yellow" rotation={-5} left="-3.5%" top="5%" />
+          <PostIt color="pink" rotation={8} left="-4%" top="30%" />
+          <PostIt color="blue" rotation={-3} left="-3%" top="55%" />
+
+          <PostIt color="green" rotation={-5} left="92%" top="5%" />
+          <PostIt color="orange" rotation={8} left="93%" top="30%" />
+          <PostIt color="purple" rotation={-3} left="92.5%" top="55%" />
+          
           <img src={MacBookImg} alt="MacBook" className="w-full h-auto" />
+          
+          <div className="absolute bottom-[-12%] w-[120%] left-[-10%]">
+            <div className="h-24 bg-gradient-to-b from-[#3a3a3a] to-[#1a1a1a] rounded-t-lg ">
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6a6a6a] to-transparent" />
+              <div className="absolute top-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4a4a4a] to-transparent opacity-50" />
+            </div>
+            <div className="absolute -bottom-[72.5%] left-[0%] w-24 h-[72%] bg-[#1a1a1a]" />
+            <div className="absolute -bottom-[72.5%] right-[0%] w-24 h-[72%] bg-[#1a1a1a]" />
+          </div>
 
           <div className="absolute top-[10%] left-[10%] w-[80%] h-[80%] overflow-hidden rounded-t-[20px] border-[10px] border-black bg-background">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-b-lg z-[60]" />
