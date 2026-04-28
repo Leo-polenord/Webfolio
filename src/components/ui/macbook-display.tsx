@@ -51,7 +51,13 @@ export default function MacBookDisplay() {
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
       
-      <div className="absolute inset-0 bg-[#f8f8f8]" />
+<div className="absolute inset-0 bg-[#f8f8f8]" />
+      
+      <div className="absolute -top-8 left-0 right-0 h-full flex items-start justify-center pointer-events-none z-0">
+        <h1 className="text-[20vw] font-bold uppercase font-sans text-gray-200/50 dark:text-gray-700/30 leading-[0.7]">
+          WEBFOLIO
+        </h1>
+      </div>
       
       <div className="h-full flex items-center justify-center p-2 relative z-10">
         <div className="w-[90vw] max-w-6xl relative" id="macbook-container">
