@@ -12,15 +12,15 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="flex min-h-full items-center justify-center px-6 py-4">
-      <div className="mx-auto max-w-3xl">
-        <div className="text-center">
-          <h1 className="mb-4 text-balance text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl">
+    <section id="home" className="flex min-w-full min-h-[70vh] items-center justify-center px-4 py-20">
+      <div className="mx-auto max-w-4xl">
+        <div className="text-center px-0 leading-5">
+          <h1 className="mb-8 text-balance text-5xl tracking-tight text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
             <span className="font-open-sans-custom not-italic">Léo-Paul </span>
             <span className="font-serif italic">Jay</span>
           </h1>
 
-          <p className="mb-4 mx-auto max-w-xl text-pretty text-muted-foreground font-thin font-open-sans-custom tracking-wide text-base">
+          <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-muted-foreground dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
             {t('hero.subtitle.part1')}{" "}
             <span className="font-serif italic">{t('hero.subtitle.clean')}</span>{" "}
             {t('hero.subtitle.part2')}{" "}
@@ -28,7 +28,7 @@ export function HeroSection() {
           </p>
 
           <div className="flex justify-center">
-            <ShinyButton onClick={scrollToProjects} className="px-6 py-2 text-sm">
+            <ShinyButton onClick={scrollToProjects} className="px-8 py-3 text-base">
               {t('hero.cta')}
             </ShinyButton>
           </div>

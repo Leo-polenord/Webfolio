@@ -5,6 +5,7 @@ import { SkillsSection } from "./skills-section"
 import { ProjectsSection } from "./projects-section"
 import { AboutSection } from "./about-section"
 import { ContactSection } from "./contact-section"
+import { Footer } from "./footer"
 
 const postItColors = {
   yellow: 'bg-yellow-300',
@@ -65,12 +66,12 @@ export default function MacBookDisplay() {
           <img src={MacBookImg} alt="MacBook" className="w-full h-auto" />
           
           <div className="absolute bottom-[-12%] w-[120%] left-[-10%]">
-            <div className="h-24 bg-gradient-to-b from-[#3a3a3a] to-[#1a1a1a] rounded-t-lg ">
+            <div className="h-24 bg-gradient-to-b from-[#3a3a3a] to-[#1a1a1a] rounded-t-lg shadow-[0_-8px_30px_rgba(0,0,0,0.6)]">
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6a6a6a] to-transparent" />
               <div className="absolute top-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4a4a4a] to-transparent opacity-50" />
             </div>
-            <div className="absolute -bottom-[72.5%] left-[0%] w-24 h-[72%] bg-[#1a1a1a]" />
-            <div className="absolute -bottom-[72.5%] right-[0%] w-24 h-[72%] bg-[#1a1a1a]" />
+            <div className="absolute -bottom-[72.5%] left-[0%] w-24 h-[72%] bg-[#1a1a1a] rounded-b-lg shadow-[0_8px_20px_rgba(0,0,0,0.6)]" />
+            <div className="absolute -bottom-[72.5%] right-[0%] w-24 h-[72%] bg-[#1a1a1a] rounded-b-lg shadow-[0_8px_20px_rgba(0,0,0,0.6)]" />
           </div>
 
           <div className="absolute top-[10%] left-[10%] w-[80%] h-[80%] overflow-hidden rounded-t-[20px] border-[10px] border-black bg-background">
@@ -79,15 +80,14 @@ export default function MacBookDisplay() {
               <div className="pt-8">
                 <FloatingNavbar />
               </div>
-              <div className="h-[calc(100%-60px)]">
+              <div className="origin-top scale-75">
                 <HeroSection />
-              </div>
-              <div className="scale-75 origin-top pb-4">
                 <SkillsSection />
                 <ProjectsSection />
                 <AboutSection />
                 <ContactSection />
               </div>
+              <Footer />
             </div>
           </div>
         </div>
