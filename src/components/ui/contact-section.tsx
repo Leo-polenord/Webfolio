@@ -43,7 +43,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex min-w-full min-h-[40vh] origin-top md:scale-75 items-center justify-center px-4 py-20"
+      className="flex min-w-full min-h-[30vh] md:max-h-[40vh] origin-top md:scale-75 items-center justify-center px-4 py-2"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 max-w-2xl text-center">
