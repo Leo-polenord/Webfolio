@@ -171,7 +171,7 @@ export function ContactSection() {
                 <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.resume')}</h4>
                 <Button 
                   variant="outline"
-                  onClick={() => window.location.href = '/Webfolio/cv'}
+                  onClick={() => window.location.href = '/Webfolio/#cv'}
                   className="w-full"
                 >
                   <Download className="h-4 w-4 mr-2" />

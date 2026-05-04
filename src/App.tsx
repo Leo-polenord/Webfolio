@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import MentionsLegales from "@/components/ui/mentions-legales"
 import CVPage from "@/components/ui/cv-page"
 import { FloatingNavbar } from "@/components/ui/floating-navbar"
@@ -11,13 +11,13 @@ import { Footer } from "@/components/ui/footer"
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Webfolio/">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainApp />} />
         <Route path="/cv" element={<CVPage />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
