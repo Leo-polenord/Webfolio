@@ -12,15 +12,15 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="flex min-w-full min-h-screen items-center justify-center px-4 py-20">
-      <div className="mx-auto max-w-4xl">
-        <div className="text-center px-0 leading-5">
-          <h1 className="mb-8 text-balance text-5xl tracking-tight text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] md:text-6xl lg:text-8xl">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20">
+      <div className="max-w-4xl w-full">
+        <div className="text-center">
+          <h1 className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-foreground">
             <span className="font-open-sans-custom not-italic">Léo-Paul </span>
             <span className="font-serif italic">Jay</span>
           </h1>
 
-          <p className="mb-8 mx-auto max-w-2xl text-pretty leading-relaxed text-muted-foreground dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-thin font-open-sans-custom tracking-wide leading-7 text-xl">
+          <p className="mb-8 mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground font-open-sans-custom">
             {t('hero.subtitle.part1')}{" "}
             <span className="font-serif italic">{t('hero.subtitle.clean')}</span>{" "}
             {t('hero.subtitle.part2')}{" "}

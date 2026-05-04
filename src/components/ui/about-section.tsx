@@ -1,5 +1,4 @@
 import { AboutQuote } from "./about-quote"
-import { cn } from "@/lib/utils"
 import { useLanguage } from "@/context/LanguageContext"
 
 export function AboutSection() {
@@ -8,25 +7,14 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="flex min-w-full min-h-screen items-center justify-center px-4 py-20"
-      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20"
     >
-      <div
-        aria-hidden="true"
-        className={cn(
-          "absolute inset-0 z-0 size-full pointer-events-none",
-          "bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)]",
-          "bg-[size:12px_12px]",
-          "opacity-30",
-        )}
-      />
-
-      <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="mx-auto mb-10 max-w-2xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+      <div className="w-full max-w-7xl">
+        <div className="mb-8 md:mb-10 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-open-sans-custom">
             {t('about.title')}
           </h1>
-          <p className="text-muted-foreground mt-4 text-sm md:text-base font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-muted-foreground mt-3 text-sm md:text-base font-open-sans-custom">
             {t('about.subtitle')}
           </p>
         </div>
