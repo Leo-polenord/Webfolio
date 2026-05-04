@@ -20,7 +20,7 @@ export default function CVPage() {
           {t('legal.back')}
         </button>
           <a
-            href={`${import.meta.env.BASE_URL}CV_Leo-Paul_Jay.pdf`}
+            href="/Webfolio/CV_Leo-Paul_Jay.pdf"
             download="CV - Leo-Paul Jay.pdf"
             className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors mb-6"
           >
@@ -30,7 +30,7 @@ export default function CVPage() {
         </div>
         
         <iframe
-          src={`${import.meta.env.BASE_URL}CV_Leo-Paul_Jay.pdf`}
+          src="/Webfolio/CV_Leo-Paul_Jay.pdf"
           className="w-full h-[75vh] rounded-lg border border-border"
         />
       </div>
