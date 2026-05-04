@@ -43,14 +43,14 @@ export function AboutQuote() {
     : 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.08) 30%, transparent 60%)'
 
   return (
-    <div className="mx-auto mb-10 max-w-7xl px-6 md:mb-20 xl:px-0">
+    <div className="mx-auto mb-6 md:mb-10 px-2 md:px-0">
       <div className="relative">
         <div 
           onMouseMove={handleMouseMove}
           className="relative flex flex-col items-center border-2 rounded-lg backdrop-blur-sm overflow-hidden border-border/50 bg-card/30 dark:border-white/20 dark:bg-white/5"
         >
           <motion.div
-            className="pointer-events-none absolute z-10 h-96 w-96 rounded-full -translate-x-1/2 -translate-y-1/2"
+            className="pointer-events-none absolute z-10 h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full -translate-x-1/2 -translate-y-1/2"
             style={{
               background: gradientBackground,
               left: mousePosition.x,
@@ -64,22 +64,22 @@ export function AboutQuote() {
             }}
           />
 
-          <div className="relative z-20 mx-auto max-w-5xl rounded-[24px] py-4 px-2 sm:py-6 sm:px-4 md:p-10 xl:py-20">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6">
-              <p className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-foreground/90 dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
+          <div className="relative z-20 mx-auto max-w-5xl p-4 md:p-8 lg:p-10 xl:p-16">
+            <div className="space-y-3 md:space-y-4">
+              <p className="text-sm md:text-base lg:text-xl xl:text-2xl text-foreground/90 font-open-sans-custom leading-relaxed">
                 {t('about.text1')}
               </p>
-              <p className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-foreground/90 dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
+              <p className="text-sm md:text-base lg:text-xl xl:text-2xl text-foreground/90 font-open-sans-custom leading-relaxed">
                 {t('about.text2')}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute -left-1.5 -top-1.5 h-3 w-3 bg-accent dark:bg-white/80 z-30" />
-        <div className="absolute -bottom-1.5 -left-1.5 h-3 w-3 bg-accent dark:bg-white/80 z-30" />
-        <div className="absolute -right-1.5 -top-1.5 h-3 w-3 bg-accent dark:bg-white/80 z-30" />
-        <div className="absolute -bottom-1.5 -right-1.5 h-3 w-3 bg-accent dark:bg-white/80 z-30" />
+        <div className="absolute -left-1 -top-1 h-2 w-2 md:h-3 md:w-3 bg-accent dark:bg-white/80 z-30" />
+        <div className="absolute -bottom-1 -left-1 h-2 w-2 md:h-3 md:w-3 bg-accent dark:bg-white/80 z-30" />
+        <div className="absolute -right-1 -top-1 h-2 w-2 md:h-3 md:w-3 bg-accent dark:bg-white/80 z-30" />
+        <div className="absolute -bottom-1 -right-1 h-2 w-2 md:h-3 md:w-3 bg-accent dark:bg-white/80 z-30" />
       </div>
     </div>
   )

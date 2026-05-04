@@ -43,27 +43,27 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex min-w-full min-h-[30vh] md:max-h-[40vh] origin-top md:scale-75 items-center justify-center px-4 py-2"
+      className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20"
     >
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+      <div className="w-full max-w-6xl">
+        <div className="mb-10 md:mb-12 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-open-sans-custom">
             {t('contact.title')}
           </h1>
-          <p className="text-muted-foreground mt-4 text-sm md:text-base font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-muted-foreground mt-3 text-sm md:text-base font-open-sans-custom">
             {t('contact.subtitle')}
           </p>
         </div>
 
         <BentoCard className="mb-4 text-center">
-          <p className="text-foreground/90 text-lg font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-foreground/90 text-base md:text-lg font-open-sans-custom">
             {t('contact.availability')}
           </p>
         </BentoCard>
 
-        <div className="grid grid-cols-1 md:grid-cols-[2.2fr,0.8fr] gap-4">
-          <BentoCard className="md:col-span-1">
-            <h3 className="text-xl font-bold text-foreground mb-4 font-open-sans-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-[2.2fr,0.8fr] gap-6">
+          <BentoCard className="lg:col-span-1">
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 font-open-sans-custom">
               {t('contact.form.title')}
             </h3>
             <form 
@@ -73,7 +73,7 @@ export function ContactSection() {
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-2">
-                  <Label className="text-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
+                  <Label className="text-foreground font-open-sans-custom">
                     {t('contact.form.name')}
                   </Label>
                   <Input
@@ -81,11 +81,11 @@ export function ContactSection() {
                     name="name"
                     required
                     placeholder={t('contact.form.placeholder.name')}
-                    className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
+                    className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <Label className="text-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
+                  <Label className="text-foreground font-open-sans-custom">
                     {t('contact.form.email')}
                   </Label>
                   <Input
@@ -93,12 +93,12 @@ export function ContactSection() {
                     name="email"
                     required
                     placeholder={t('contact.form.placeholder.email')}
-                    className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
+                    className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <Label className="text-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] font-open-sans-custom">
+                <Label className="text-foreground font-open-sans-custom">
                   {t('contact.form.message')}
                 </Label>
                 <Textarea 
@@ -106,11 +106,11 @@ export function ContactSection() {
                   required
                   placeholder={t('contact.form.placeholder.message')}
                   rows={5}
-                  className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground dark:[text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)] resize-none" 
+                  className="bg-accent/10 border-border dark:bg-white/10 dark:border-white/20 text-foreground placeholder:text-muted-foreground resize-none" 
                 />
               </div>
               <Button
-                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 dark:[text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-open-sans-custom"
                 type="submit"
                 disabled={sending}
               >
@@ -125,7 +125,7 @@ export function ContactSection() {
             </form>
           </BentoCard>
 
-          <div className="flex flex-col gap-4 md:col-span-1">
+          <div className="flex flex-col gap-4 lg:col-span-1">
             <BentoCardWithIcon
               icon={<Mail className="h-5 w-5 text-primary" />}
               title={t('contact.email')}
@@ -170,7 +170,7 @@ export function ContactSection() {
               <div className="bg-white dark:bg-white/5 border border-border dark:border-white/10 rounded-xl p-4 shadow-sm dark:shadow-none">
                 <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.resume')}</h4>
                 <a 
-                  href="/cv.pdf" 
+                  href="/CV_Leo-Paul_JAY.pdf" 
                   download
                   className="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-muted border border-border dark:border-white/10 hover:bg-accent/20 transition-all"
                 >

@@ -50,14 +50,14 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="flex min-w-full min-h-[30vh] md:min-h-[40vh] origin-top md:scale-75 items-center justify-center px-4 py-20"
+      className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20"
     >
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+      <div className="w-full max-w-6xl">
+        <div className="mb-10 md:mb-12 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-open-sans-custom">
             {t('projects.title')}
           </h1>
-          <p className="text-muted-foreground mt-4 text-sm md:text-base font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-muted-foreground mt-3 text-sm md:text-base font-open-sans-custom">
             {t('projects.subtitle')}
           </p>
         </div>

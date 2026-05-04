@@ -83,34 +83,34 @@ export function SkillsSection() {
   const { t } = useLanguage()
   
   return (
-    <section id="skills" className="flex min-w-full min-h-[30vh] md:min-h-[30vh] origin-top md:scale-75 items-center justify-center px-4 py-20">
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+    <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20">
+      <div className="w-full max-w-6xl">
+        <div className="mb-10 md:mb-12 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-open-sans-custom">
             {t('skills.title')}
           </h1>
-          <p className="text-muted-foreground mt-4 text-sm md:text-base font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-muted-foreground mt-3 text-sm md:text-base font-open-sans-custom">
             {t('skills.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="flex flex-col gap-4">
             <BentoCard className="flex flex-col">
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 font-open-sans-custom">
                 {t('skills.professional')}
               </h3>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {softSkills.map((skill) => (
-                  <div key={skill.name} className="flex items-start gap-4 group">
-                    <div className="p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
-                      <skill.icon className="h-6 w-6 text-foreground" />
+                  <div key={skill.name} className="flex items-start gap-3 group">
+                    <div className="p-2 md:p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
+                      <skill.icon className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
                     </div>
                     <div>
-                      <h4 className="text-foreground font-semibold text-lg font-open-sans-custom">
+                      <h4 className="text-foreground font-semibold text-base md:text-lg font-open-sans-custom">
                         {t(skill.name)}
                       </h4>
-                      <p className="text-muted-foreground text-base mt-1">
+                      <p className="text-muted-foreground text-sm md:text-base mt-0.5">
                         {t(skill.description)}
                       </p>
                     </div>
@@ -119,49 +119,48 @@ export function SkillsSection() {
               </div>
             </BentoCard>
 
-            <BentoCard className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
+            <BentoCard className="flex-1 flex flex-col">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 font-open-sans-custom">
                 {t('skills.beyond')}
               </h3>
-              <div className="space-y-5">
-                <div className="flex items-start gap-4 group">
-                  <div className="p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
-                    <GraduationCap className="h-6 w-6 text-foreground" />
+              <div className="flex-1 flex flex-col space-y-4">
+                <div className="flex items-start gap-3 group">
+                  <div className="p-2 md:p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
+                    <GraduationCap className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
                   </div>
                   <div>
-                    <h4 className="text-foreground font-semibold text-lg font-open-sans-custom">
+                    <h4 className="text-foreground font-semibold text-base md:text-lg font-open-sans-custom">
                       {t('beyond.education')}
                     </h4>
-                    <p className="text-muted-foreground text-base mt-1">
+                    <p className="text-muted-foreground text-sm md:text-base mt-0.5">
                       {t('beyond.education.desc')}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 group">
-                  <div className="p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
-                    <Palette className="h-6 w-6 text-foreground" />
+                <div className="flex items-start gap-3 group">
+                  <div className="p-2 md:p-3 rounded-lg bg-accent/10 border border-border dark:bg-white/5 dark:border-white/10 group-hover:bg-accent/20 dark:group-hover:bg-white/10 group-hover:border-accent dark:group-hover:border-white/20 transition-all duration-300 flex-shrink-0">
+                    <Palette className="h-5 w-5 md:h-6 md:w-6 text-foreground" />
                   </div>
                   <div>
-                    <h4 className="text-foreground font-semibold text-lg font-open-sans-custom">
+                    <h4 className="text-foreground font-semibold text-base md:text-lg font-open-sans-custom">
                       {t('beyond.design')}
                     </h4>
-                    <p className="text-muted-foreground text-base mt-1">
+                    <p className="text-muted-foreground text-sm md:text-base mt-0.5">
                       {t('beyond.design.desc')}
                     </p>
                   </div>
                 </div>
-
-                </div>
+              </div>
             </BentoCard>
           </div>
 
           <div className="flex flex-col gap-4">
             <BentoCard>
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 font-open-sans-custom">
                 {t('skills.frontend')}
               </h3>
-              <div className="grid grid-cols-4 gap-6">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6">
                 {frontendSkills.map((skill) => (
                   <SkillIcon key={skill.name} {...skill} />
                 ))}
@@ -169,10 +168,10 @@ export function SkillsSection() {
             </BentoCard>
 
             <BentoCard>
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 font-open-sans-custom">
                 {t('skills.backend')}
               </h3>
-              <div className="grid grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
                 {backendSkills.map((skill) => (
                   <SkillIcon key={skill.name} {...skill} />
                 ))}
@@ -180,10 +179,10 @@ export function SkillsSection() {
             </BentoCard>
 
             <BentoCard>
-              <h3 className="text-2xl font-bold text-foreground mb-6 font-open-sans-custom">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6 font-open-sans-custom">
                 {t('skills.tools')}
               </h3>
-              <div className="grid grid-cols-4 gap-6">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6">
                 {toolsSkills.map((skill) => (
                   <SkillIcon key={skill.name} {...skill} />
                 ))}

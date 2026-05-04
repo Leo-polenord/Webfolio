@@ -7,14 +7,14 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="flex min-w-full min-h-[30vh] md:min-h-[30vh] origin-top md:scale-75 items-center justify-center px-4 py-20"
+      className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20"
     >
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="mx-auto mb-10 max-w-2xl text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-foreground dark:[text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
+      <div className="w-full max-w-7xl">
+        <div className="mb-8 md:mb-10 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground font-open-sans-custom">
             {t('about.title')}
           </h1>
-          <p className="text-muted-foreground mt-4 text-sm md:text-base font-open-sans-custom dark:[text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
+          <p className="text-muted-foreground mt-3 text-sm md:text-base font-open-sans-custom">
             {t('about.subtitle')}
           </p>
         </div>
