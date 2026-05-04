@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MentionsLegales from "@/components/ui/mentions-legales"
+import CVPage from "@/components/ui/cv-page"
 import { FloatingNavbar } from "@/components/ui/floating-navbar"
 import { HeroSection } from "@/components/ui/hero-section"
 import { SkillsSection } from "@/components/ui/skills-section"
@@ -13,6 +14,7 @@ export default function App() {
     <BrowserRouter basename="/Webfolio/">
       <Routes>
         <Route path="/" element={<MainApp />} />
+        <Route path="/cv" element={<CVPage />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
       </Routes>
     </BrowserRouter>

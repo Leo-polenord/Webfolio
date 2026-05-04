@@ -169,14 +169,14 @@ export function ContactSection() {
 
               <div className="bg-white dark:bg-white/5 border border-border dark:border-white/10 rounded-xl p-4 shadow-sm dark:shadow-none">
                 <h4 className="text-foreground font-semibold font-open-sans-custom mb-3 text-sm">{t('contact.resume')}</h4>
-                <a 
-                  href="/CV_Leo-Paul_JAY.pdf" 
-                  download
-                  className="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-muted border border-border dark:border-white/10 hover:bg-accent/20 transition-all"
+                <Button 
+                  variant="outline"
+                  onClick={() => window.location.href = '/Webfolio/cv'}
+                  className="w-full"
                 >
-                  <Download className="h-5 w-5 text-primary" />
-                  <span className="text-foreground text-sm">{t('contact.download')}</span>
-                </a>
+                  <Download className="h-4 w-4 mr-2" />
+                  {t('contact.download')}
+                </Button>
               </div>
             </div>
           </div>
